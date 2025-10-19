@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Time Personal Life Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>In Time Life Tracker</h1>
+
+        <div id="setup">
+            <label>Monthly Salary (₹):</label>
+            <input type="number" id="salary" placeholder="13000">
+
+            <label>Work Days/Month:</label>
+            <input type="number" id="days" placeholder="30">
+
+            <label>Work Hours/Day:</label>
+            <input type="number" id="hours" placeholder="9">
+
+            <label>Bank Balance (₹):</label>
+            <input type="number" id="bank" placeholder="Enter bank balance">
+
+            <button onclick="initializeLife()">Start Life</button>
+        </div>
+
+        <div id="lifeContainer" style="display:none;">
+            <p>Life Left: <span id="lifeDisplay">0h 0m 0s</span></p>
+
+            <label>Expense (₹):</label>
+            <input type="number" id="expenseInput" placeholder="Enter expense">
+            <button onclick="spendLife()">Spend</button>
+
+            <label>Loan / Receive Money (₹):</label>
+            <input type="number" id="loanInput" placeholder="Enter money received">
+            <button onclick="addLife()">Add</button>
+
+            <h3>Transactions:</h3>
+            <ul id="transactionList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
